@@ -9,7 +9,7 @@ import io.netty.channel.socket.nio.NioSocketChannel;
 /**
  * 服务端启动流程
  */
-public class NettyClient {
+public class NettyServer {
 
     private static final int BEGIN_PORT = 8000;
 
