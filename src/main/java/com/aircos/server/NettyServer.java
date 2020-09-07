@@ -1,5 +1,6 @@
-package com.aircos;
+package com.aircos.server;
 
+import com.aircos.client.FirstClientHandler;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.nio.NioEventLoopGroup;
@@ -30,7 +31,8 @@ public class NettyServer {
                 .channel(NioServerSocketChannel.class)
                 .childHandler(new ChannelInitializer<NioSocketChannel>() {
                     protected void initChannel(NioSocketChannel ch) {
-                        // 2.2 业务处理逻辑
+                        // 2.2 业务处理逻辑 通过 pipeline 逻辑处理链添加逻辑处理器
+                        ch.pipeline().addLast(new FirstServerHandler());
                     }
                 });
 
