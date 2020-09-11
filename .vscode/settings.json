@@ -1,0 +1,6 @@
+{
+    
+    "powermode.enabled": true, // 开启 Power Mode
+    "powermode.shakeIntensity": 0, // 关闭抖动（喜欢的也可以选择不关闭）
+    "powermode.presets": "particles", // 特效预设，还有 "fireworks", "flames", "magic", "clippy", "simple-rift", "exploding-rift"
+}
